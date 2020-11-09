@@ -5,7 +5,8 @@ try {
   mongoose.connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useCreateIndex: true
+    useCreateIndex: true,
+    useFindAndModify: false,
   });
   console.log('Connected to MongoDB');
 } catch (error) {
