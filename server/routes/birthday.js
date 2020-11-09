@@ -6,7 +6,7 @@ const {
   getBirthdayById,
   updateBirthday,
   deleteBirthdayById
-} = require('./controllers/birthday');
+} = require('../controllers/birthday');
 
 router.route('/').get(getAllBirthdays);
 router.route('/').post(addBirthday);
