@@ -3,7 +3,7 @@ const Birthday = require("../db/models/birthday");
 const getAllBirthdays =(req,res)=>{
     Birthday.find()
     .then((birthday) => res.json(birthday))
-    .cath((err)=>res.status(500).json("Error: " + err));
+    .catch((err)=>res.status(500).json("Error: " + err));
 }
 
 const addBirthday = (req, res) => {
