@@ -6,9 +6,9 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-require('./server/db/config');
+require('/server/db/config');
 
-const birthdayRouter = require('./server/routes/birthday')
+const birthdayRouter = require('/server/routes/birthday')
 
 
 if (process.env.NODE_ENV === 'production') {
@@ -22,7 +22,7 @@ if (process.env.NODE_ENV === 'production') {
 
 app.use(express.json());
 
-app.use('./birthdays', birthdayRouter)
+app.use('/birthdays', birthdayRouter)
 
 const port = process.env.PORT || 8080;
 app.listen(port, () => {

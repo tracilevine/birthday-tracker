@@ -38,7 +38,7 @@ const addBirthday = (req, res) => {
           return res.status(404).json("Error: Birthday not found!");
         }
   
-        res.status(204).json(Birthday);
+        res.status(204).json(birthday);
       })
       .catch((err) => {
         res.status(500).json("Error: " + err);
@@ -53,3 +53,4 @@ module.exports = {
     updateBirthday,
     deleteBirthdayById,
   };
+  
